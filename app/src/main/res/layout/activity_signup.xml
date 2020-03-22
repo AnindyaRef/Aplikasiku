@@ -34,7 +34,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.077"
+                app:layout_constraintVertical_bias="0.012"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -49,6 +49,7 @@
                 app:layout_constraintVertical_bias="0.123">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fullname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Full Name" />
@@ -66,13 +67,14 @@
                 app:layout_constraintVertical_bias="0.021">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Email" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/password"
+                android:id="@+id/password_layout"
                 android:layout_width="340dp"
                 android:layout_height="67dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -83,6 +85,7 @@
                 app:layout_constraintVertical_bias="0.021">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Password" />
@@ -97,17 +100,18 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.492"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/password"
+                app:layout_constraintTop_toBottomOf="@+id/password_layout"
                 app:layout_constraintVertical_bias="0.021">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cnfirmpass"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Confirm Password" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/gender"
+                android:id="@+id/gender_layout"
                 android:layout_width="340dp"
                 android:layout_height="67dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -118,10 +122,12 @@
                 app:layout_constraintVertical_bias="0.021">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/gender"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Gender" />
             </com.google.android.material.textfield.TextInputLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
@@ -135,5 +141,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.412" />
+        app:layout_constraintVertical_bias="0.412"
+        android:onClick="handleDone"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
