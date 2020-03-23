@@ -22,6 +22,7 @@ public class SignupActivity extends AppCompatActivity {
 
 
     public static final String PHOTO_KEY = "photo";
+    public static final String USERNAME_KEY = "username";
     public static final String NAME_KEY = "name";
     public static final String EMAIL_KEY = "email";
     public static final String PASSWORD_KEY = "password";
@@ -29,6 +30,7 @@ public class SignupActivity extends AppCompatActivity {
     public static final String GEBDER_KEY = "gender";
 
     private ImageView photoImage;
+    private EditText usernameInput;
     private EditText fullnameInput;
     private EditText emailInput;
     private EditText passwordInput;
@@ -43,6 +45,7 @@ public class SignupActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
 
         photoImage = findViewById(R.id.avatar);
+        usernameInput = findViewById(R.id.username);
         fullnameInput = findViewById(R.id.fullname);
         emailInput = findViewById(R.id.email);
         passwordInput = findViewById(R.id.password);
@@ -50,11 +53,12 @@ public class SignupActivity extends AppCompatActivity {
         genderInput = findViewById(R.id.gender);
     }
 
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == RESULT_CANCELED){
+        if (requestCode==RESULT_CANCELED){
             return;
         }
 
@@ -62,22 +66,23 @@ public class SignupActivity extends AppCompatActivity {
             if (data != null){
                 try {
                     imageUri = data.getData();
-                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri);
+                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(),imageUri);
                     photoImage.setImageBitmap(bitmap);
                 }catch (IOException e){
-                    Toast.makeText(this, "Input Photo fiest!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Can't load image", Toast.LENGTH_SHORT).show();
                     Log.e(TAG, e.getMessage());
                 }
             }
         }
     }
 
-    public void  changePhoto(View view){
+    public void changePhoto(View view) {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(intent, 1);
     }
 
     public void handleDone(View view) {
+        String user = usernameInput.getText().toString();
         String name = fullnameInput.getText().toString();
         String email = emailInput.getText().toString();
         String pass = passwordInput.getText().toString();
@@ -85,7 +90,9 @@ public class SignupActivity extends AppCompatActivity {
         String gender = genderInput.getText().toString();
         Intent intent = new Intent(this, ProfileActivity.class);
 
-        if (name.isEmpty()){
+        if (user.isEmpty()){
+            usernameInput.setError("Please fill username!");
+        } else if (name.isEmpty()){
             fullnameInput.setError("Please input your name!");
         }else if (email.isEmpty()){
             emailInput.setError("Please input your va;id email!");
@@ -99,6 +106,7 @@ public class SignupActivity extends AppCompatActivity {
             Toast.makeText(this, "Input your image plaese! ", Toast.LENGTH_SHORT).show();
             changePhoto(view);
         }else {
+            intent.putExtra(USERNAME_KEY, user);
             intent.putExtra(NAME_KEY, name);
             intent.putExtra(EMAIL_KEY, email);
             intent.putExtra(PASSWORD_KEY, pass);
@@ -108,4 +116,5 @@ public class SignupActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
 }
