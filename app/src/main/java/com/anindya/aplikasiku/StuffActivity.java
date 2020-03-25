@@ -28,7 +28,6 @@ public class StuffActivity extends AppCompatActivity implements StuffAdapter.onI
     private RecyclerView stuffView;
     private StuffAdapter adapter;
     private Account account;
-    private Stuff stuff;
 
 
     @Override
@@ -36,7 +35,7 @@ public class StuffActivity extends AppCompatActivity implements StuffAdapter.onI
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stuff);
 
-        stuffView = findViewById(R.id.rv_schedule);
+        stuffView = findViewById(R.id.rv_stuff);
 
         account = Application.getAccount();
 

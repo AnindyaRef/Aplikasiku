@@ -19,6 +19,8 @@ public class AddActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
+        nameStuffInput = findViewById(R.id.input_stuff);
+
         Bundle extras = getIntent().getExtras();
         if (extras != null){
             item = extras.getParcelable(StuffActivity.NAMESTUFF_KEY);

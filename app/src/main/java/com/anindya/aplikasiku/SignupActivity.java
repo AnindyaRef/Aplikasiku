@@ -87,7 +87,7 @@ public class SignupActivity extends AppCompatActivity {
         String pass = passwordInput.getText().toString();
         String cpass = confirmPassInput.getText().toString();
         String gender = genderInput.getText().toString();
-        Intent intent = new Intent(this, ProfileActivity.class);
+        Intent intent = new Intent(this, HomeActivity.class);
 
         if (user.isEmpty()){
             usernameInput.setError("Please fill username!");
@@ -101,10 +101,10 @@ public class SignupActivity extends AppCompatActivity {
             confirmPassInput.setError("Please confirm your password!");
         }else  if(gender.isEmpty()){
             genderInput.setError("Please input your gender");
-        }else if (imageUri == null){
-            Toast.makeText(this, "Input your image plaese! ", Toast.LENGTH_SHORT).show();
-            handleChangeAvatar(view);
-        }else {
+//        }else if (imageUri == null){
+//            Toast.makeText(this, "Input your image plaese! ", Toast.LENGTH_SHORT).show();
+//            handleChangeAvatar(view);
+//        }else {
             intent.putExtra(USERNAME_KEY, user);
             intent.putExtra(NAME_KEY, name);
             intent.putExtra(EMAIL_KEY, email);
