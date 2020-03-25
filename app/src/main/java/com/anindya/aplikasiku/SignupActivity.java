@@ -44,7 +44,7 @@ public class SignupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        avatarImage  = findViewById(R.id.avatar);
+        //avatarImage  = findViewById(R.id.avatar);
         usernameInput = findViewById(R.id.username);
         fullnameInput = findViewById(R.id.fullname);
         emailInput = findViewById(R.id.email);
@@ -87,7 +87,7 @@ public class SignupActivity extends AppCompatActivity {
         String pass = passwordInput.getText().toString();
         String cpass = confirmPassInput.getText().toString();
         String gender = genderInput.getText().toString();
-        Intent intent = new Intent(this, HomeActivity.class);
+        Intent intent = new Intent(this, ProfileActivity.class);
 
         if (user.isEmpty()){
             usernameInput.setError("Please fill username!");
@@ -104,14 +104,14 @@ public class SignupActivity extends AppCompatActivity {
 //        }else if (imageUri == null){
 //            Toast.makeText(this, "Input your image plaese! ", Toast.LENGTH_SHORT).show();
 //            handleChangeAvatar(view);
-//        }else {
+      }else {
             intent.putExtra(USERNAME_KEY, user);
             intent.putExtra(NAME_KEY, name);
             intent.putExtra(EMAIL_KEY, email);
             intent.putExtra(PASSWORD_KEY, pass);
             intent.putExtra(CONFIRMPASS_KEY, cpass);
             intent.putExtra(GEBDER_KEY, gender);
-            intent.putExtra(AVATARIMAGE_KEY,imageUri.toString());
+            //intent.putExtra(AVATARIMAGE_KEY,imageUri.toString());
             startActivity(intent);
         }
     }

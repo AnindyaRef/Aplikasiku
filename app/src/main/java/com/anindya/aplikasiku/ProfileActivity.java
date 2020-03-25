@@ -21,7 +21,7 @@ import static com.anindya.aplikasiku.SignupActivity.USERNAME_KEY;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    private ImageView avatarImage;
+    //private ImageView avatarImage;
     private TextView fullnameText;
     private TextView emailText;
     private TextView genderText;
@@ -33,7 +33,7 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        avatarImage = findViewById(R.id.avatar);
+        //avatarImage = findViewById(R.id.avatar);
         fullnameText = findViewById(R.id.fullname);
         emailText = findViewById(R.id.email);
         genderText = findViewById(R.id.gender);
@@ -46,19 +46,19 @@ public class ProfileActivity extends AppCompatActivity {
             genderText.setText(extrass.getString(GEBDER_KEY));
             usernameText.setText(extrass.getString(USERNAME_KEY));
 
-            uri = Uri.parse(extrass.getString(AVATARIMAGE_KEY));
-            Bitmap bitmap = null;
-            try {
-                bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), uri);
-            } catch (IOException e){
-                e.printStackTrace();
-            }
-            avatarImage.setImageBitmap(bitmap);
+//            uri = Uri.parse(extrass.getString(AVATARIMAGE_KEY));
+//            Bitmap bitmap = null;
+//            try {
+//                bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), uri);
+//            } catch (IOException e){
+//                e.printStackTrace();
+//            }
+//            avatarImage.setImageBitmap(bitmap);
         }
     }
 
     public void handleHome(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
     }
 }

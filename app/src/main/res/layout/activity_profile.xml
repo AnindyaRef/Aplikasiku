@@ -14,18 +14,6 @@
         android:background="#EFEEC2"
         tools:context=".ProfileActivity">
 
-        <ImageView
-            android:id="@+id/avatar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.145"
-            app:srcCompat="@mipmap/ic_launcher_round" />
-
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline2"
             android:layout_width="wrap_content"
@@ -41,10 +29,10 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.968"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/avatar"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintVertical_bias="0.087" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.321" />
 
         <View
             android:id="@+id/separator1"
@@ -88,21 +76,6 @@
             app:layout_constraintTop_toBottomOf="@+id/gender"
             app:layout_constraintVertical_bias="0.039" />
 
-        <View
-            android:id="@+id/separator3"
-            android:layout_width="372dp"
-            android:layout_height="2dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="80dp"
-            android:background="#494848"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintVertical_bias="0.039"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/username" />
-
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
@@ -111,10 +84,10 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintVertical_bias="0.087"  />
+            app:layout_constraintVertical_bias="0.098" />
 
         <TextView
             android:id="@+id/textView5"
@@ -124,10 +97,10 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
-            app:layout_constraintHorizontal_bias="0.972"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4"
-            app:layout_constraintVertical_bias="0.113" />
+            app:layout_constraintVertical_bias="0.133" />
 
         <TextView
             android:id="@+id/textView6"
@@ -137,10 +110,10 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5"
-            app:layout_constraintHorizontal_bias="0.972"
-            app:layout_constraintVertical_bias="0.113" />
+            app:layout_constraintVertical_bias="0.207" />
 
         <TextView
             android:id="@+id/fullname"
@@ -152,8 +125,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toBottomOf="@+id/avatar"
-            app:layout_constraintVertical_bias="0.087" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.32" />
 
         <TextView
             android:id="@+id/email"
@@ -166,7 +139,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@+id/fullname"
-            app:layout_constraintVertical_bias="0.086" />
+            app:layout_constraintVertical_bias="0.104" />
 
         <TextView
             android:id="@+id/gender"
@@ -176,36 +149,35 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@+id/email"
-            app:layout_constraintVertical_bias="0.113" />
+            app:layout_constraintVertical_bias="0.133" />
 
         <TextView
             android:id="@+id/username"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:layout_marginTop="16dp"
             android:text="Username"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toBottomOf="@+id/gender"
-            app:layout_constraintVertical_bias="0.113" />
+            app:layout_constraintTop_toBottomOf="@+id/gender" />
+
         <Button
             android:id="@+id/home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="12dp"
             android:backgroundTint="#E98BC34A"
+            android:onClick="handleHome"
             android:text="HOME"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/separator2"
-            android:onClick="handleHome"/>
-
+            app:layout_constraintTop_toBottomOf="@+id/username" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="363dp"
-        android:layout_height="57dp"
+        android:layout_width="313dp"
+        android:layout_height="82dp"
         android:text="Write your name stuff, don't panic when you do packing!"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -22,8 +22,8 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout2"
-        android:layout_width="336dp"
-        android:layout_height="56dp"
+        android:layout_width="348dp"
+        android:layout_height="107dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
@@ -34,7 +34,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/input_stuff"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="95dp"
             android:hint="Name Stuff" />
     </com.google.android.material.textfield.TextInputLayout>
 
