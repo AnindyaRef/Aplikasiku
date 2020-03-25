@@ -23,4 +23,9 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ScheduleActivity.class);
         startActivity(intent);
     }
+
+    public void handleStuff(View view) {
+        Intent intent = new Intent(this, StuffActivity.class);
+        startActivity(intent);
+    }
 }

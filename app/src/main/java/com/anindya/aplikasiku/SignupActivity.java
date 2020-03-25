@@ -19,9 +19,9 @@ import java.io.IOException;
 public class SignupActivity extends AppCompatActivity {
 
     private static final String TAG = SignupActivity.class.getCanonicalName();
+    private static final int GALLERY_REQUEST_CODE = 1;
 
-
-    public static final String PHOTO_KEY = "photo";
+    public static final String AVATARIMAGE_KEY = "image";
     public static final String USERNAME_KEY = "username";
     public static final String NAME_KEY = "name";
     public static final String EMAIL_KEY = "email";
@@ -29,7 +29,7 @@ public class SignupActivity extends AppCompatActivity {
     public static final String CONFIRMPASS_KEY ="confirmpass";
     public static final String GEBDER_KEY = "gender";
 
-    private ImageView photoImage;
+    private ImageView avatarImage;
     private EditText usernameInput;
     private EditText fullnameInput;
     private EditText emailInput;
@@ -37,14 +37,14 @@ public class SignupActivity extends AppCompatActivity {
     private EditText confirmPassInput;
     private EditText genderInput;
 
-    private Uri imageUri = null;
+    private Uri imageUri=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        photoImage = findViewById(R.id.avatar);
+        avatarImage  = findViewById(R.id.avatar);
         usernameInput = findViewById(R.id.username);
         fullnameInput = findViewById(R.id.fullname);
         emailInput = findViewById(R.id.email);
@@ -58,27 +58,26 @@ public class SignupActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode==RESULT_CANCELED){
+        if (resultCode==RESULT_CANCELED){
             return;
         }
 
-        if (requestCode == 1){
+        if (requestCode == GALLERY_REQUEST_CODE){
             if (data != null){
                 try {
                     imageUri = data.getData();
-                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(),imageUri);
-                    photoImage.setImageBitmap(bitmap);
-                }catch (IOException e){
+                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri);
+                    avatarImage.setImageBitmap(bitmap);
+                } catch (IOException e) {
                     Toast.makeText(this, "Can't load image", Toast.LENGTH_SHORT).show();
                     Log.e(TAG, e.getMessage());
                 }
             }
         }
     }
-
-    public void changePhoto(View view) {
+    public void handleChangeAvatar(View view) {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-        startActivityForResult(intent, 1);
+        startActivityForResult(intent, GALLERY_REQUEST_CODE);
     }
 
     public void handleDone(View view) {
@@ -104,7 +103,7 @@ public class SignupActivity extends AppCompatActivity {
             genderInput.setError("Please input your gender");
         }else if (imageUri == null){
             Toast.makeText(this, "Input your image plaese! ", Toast.LENGTH_SHORT).show();
-            changePhoto(view);
+            handleChangeAvatar(view);
         }else {
             intent.putExtra(USERNAME_KEY, user);
             intent.putExtra(NAME_KEY, name);
@@ -112,9 +111,10 @@ public class SignupActivity extends AppCompatActivity {
             intent.putExtra(PASSWORD_KEY, pass);
             intent.putExtra(CONFIRMPASS_KEY, cpass);
             intent.putExtra(GEBDER_KEY, gender);
-            intent.putExtra(PHOTO_KEY,imageUri.toString());
+            intent.putExtra(AVATARIMAGE_KEY,imageUri.toString());
             startActivity(intent);
         }
     }
+
 
 }

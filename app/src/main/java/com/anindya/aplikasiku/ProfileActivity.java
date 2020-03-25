@@ -16,7 +16,8 @@ import java.io.IOException;
 import static com.anindya.aplikasiku.SignupActivity.EMAIL_KEY;
 import static com.anindya.aplikasiku.SignupActivity.GEBDER_KEY;
 import static com.anindya.aplikasiku.SignupActivity.NAME_KEY;
-import static com.anindya.aplikasiku.SignupActivity.PHOTO_KEY;
+import static com.anindya.aplikasiku.SignupActivity.AVATARIMAGE_KEY;
+import static com.anindya.aplikasiku.SignupActivity.USERNAME_KEY;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -24,6 +25,7 @@ public class ProfileActivity extends AppCompatActivity {
     private TextView fullnameText;
     private TextView emailText;
     private TextView genderText;
+    private TextView usernameText;
     private Uri uri;
 
     @Override
@@ -31,18 +33,20 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        avatarImage = findViewById(R.id.photo);
+        avatarImage = findViewById(R.id.avatar);
         fullnameText = findViewById(R.id.fullname);
         emailText = findViewById(R.id.email);
         genderText = findViewById(R.id.gender);
+        usernameText = findViewById(R.id.username);
 
         Bundle extrass = getIntent().getExtras();
         if (extrass != null){
             fullnameText.setText(extrass.getString(NAME_KEY));
             emailText.setText(extrass.getString(EMAIL_KEY));
             genderText.setText(extrass.getString(GEBDER_KEY));
+            usernameText.setText(extrass.getString(USERNAME_KEY));
 
-            uri = Uri.parse(extrass.getString(PHOTO_KEY));
+            uri = Uri.parse(extrass.getString(AVATARIMAGE_KEY));
             Bitmap bitmap = null;
             try {
                 bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), uri);
