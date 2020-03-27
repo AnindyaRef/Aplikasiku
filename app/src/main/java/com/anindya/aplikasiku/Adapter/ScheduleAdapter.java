@@ -38,7 +38,7 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.ViewHo
         ScheduleModel item = items.get(position);
         Picasso.get().load(item.getLogo()).into(holder.logoImage);
         holder.nameText.setText(item.getName());
-        holder.nameText.setText(item.getKet());
+        holder.ketText.setText(item.getKet());
     }
 
     @Override

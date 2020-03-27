@@ -14,18 +14,13 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
     }
 
-    public void handleAccount(View view) {
-        Intent intent = new Intent(this, ProfileActivity.class);
-        startActivity(intent);
-    }
-
-    public void handleSchedule(View view) {
-        Intent intent = new Intent(this, ScheduleActivity.class);
-        startActivity(intent);
-    }
-
     public void handleStuff(View view) {
         Intent intent = new Intent(this, StuffActivity.class);
+        startActivity(intent);
+    }
+
+    public void handleKonser(View view) {
+        Intent intent = new Intent(this, ScheduleActivity.class);
         startActivity(intent);
     }
 }

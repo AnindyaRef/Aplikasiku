@@ -5,9 +5,11 @@ import java.util.List;
 
 public class Account {
     private List<Stuff> stuffs;
+    private List<SignUp> signUps;
 
     public Account(){
         this.stuffs = new ArrayList<>();
+        this.signUps = new ArrayList<>();
     }
 
     public Account(List<Stuff> stuffs) {
@@ -27,5 +29,13 @@ public class Account {
     }
     public void updateStuff(int index, Stuff stuff){
         this.stuffs.set(index, stuff);
+    }
+
+    public List<SignUp> getSignUps(){
+        return signUps;
+    }
+
+    public void addSignUp(SignUp signUp){
+        this.signUps.add(signUp);
     }
 }

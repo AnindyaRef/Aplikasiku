@@ -4,15 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C4FF99"
+    android:background="#F82F73"
     tools:context=".MainActivity">
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="43dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -20,6 +13,7 @@
         android:layout_height="94dp"
         android:text="MY CONCERT APPLICATION"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,57 +27,42 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textSize="18sp"
+        android:text="See MonstaX schedule concert "
         android:textAlignment="center"
-        android:text="You can see MonstaX schedule concert "
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/button_signup"
-        android:layout_width="229dp"
-        android:layout_height="52dp"
-        android:layout_marginBottom="36dp"
-        android:backgroundTint="#F6D638"
-        android:onClick="handlesignup"
-        android:text="SIGN UP"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.543"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_login"
-        app:layout_constraintVertical_bias="0.157" />
 
     <Button
         android:id="@+id/button_login"
         android:layout_width="229dp"
         android:layout_height="52dp"
         android:layout_marginTop="28dp"
-        android:backgroundTint="#FAE478"
-        android:onClick="handlelogin"
+        android:backgroundTint="#3F51B5"
         android:text="LOGIN"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pass_layout" />
+        app:layout_constraintTop_toBottomOf="@+id/text_signup" />
 
     <TextView
         android:id="@+id/textView_signup"
-        android:layout_width="347dp"
-        android:layout_height="59dp"
-        android:text="Have a account already?, If you don't have a account, you must Sign Up.  Have a account just Login "
+        android:layout_width="349dp"
+        android:layout_height="43dp"
+        android:text="Have a account already?, If you don't have a account, you must Sign Up."
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintHorizontal_bias="0.564"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.102" />
+        app:layout_constraintTop_toBottomOf="@+id/pass_layout"
+        app:layout_constraintVertical_bias="0.146" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/user_layout"
@@ -93,14 +72,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_signup"
-        app:layout_constraintVertical_bias="0.041">
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.129">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/user_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username" />
+            android:hint="Username"
+            android:textColor="#FFFFFF" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -112,13 +92,25 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/user_layout"
-        app:layout_constraintVertical_bias="0.106">
+        app:layout_constraintVertical_bias="0.097">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/pass_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password" />
+            android:hint="Password"
+            android:textColor="#FFFFFF" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/text_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Here to SignUp ."
+        android:textAlignment="center"
+        android:textColor="#3F51B5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_signup" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
