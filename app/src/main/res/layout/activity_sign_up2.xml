@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:backgroundTint="#F82F73"
+    android:backgroundTint="#57C17829"
     tools:context=".SignUp2Activity">
 
     <com.google.android.material.textfield.TextInputLayout
@@ -57,27 +57,25 @@
         app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.167" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
-        android:text="SIGN-UP"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="45dp"
         android:layout_height="50dp"
-        android:layout_marginTop="44dp"
+        android:src="@drawable/account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="91dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="261dp"
+        android:layout_height="56dp"
+        android:text="Hi there! please make account first for see monstax concert"
+        android:textAlignment="center"
+        android:textColor="#2B2A2A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        tools:src="@drawable/account" />
+        tools:layout_editor_absoluteY="135dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

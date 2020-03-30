@@ -4,58 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F82F73"
+    android:background="#EAB883"
     tools:context=".HomeActivity">
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HOME"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023"
-        tools:textAlignment="center" />
 
     <ImageView
         android:id="@+id/image_konser"
-        android:layout_width="95dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="140dp"
+        android:layout_width="262dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="112dp"
         android:onClick="handleKonser"
-        android:src="@drawable/concert"
+        android:src="@drawable/konser_monstax"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/image_stuff"
-        android:layout_width="95dp"
-        android:layout_height="75dp"
+        android:layout_width="153dp"
+        android:layout_height="116dp"
         android:onClick="handleStuff"
         android:src="@drawable/travel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.591" />
+        app:layout_constraintVertical_bias="0.691" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Schedule Concert"
-        android:textColor="#FFFFFF"
+        android:textColor="#302F2F"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_konser"
         app:layout_constraintVertical_bias="0.04" />
@@ -65,13 +50,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="My Stuff"
-        android:textColor="#FFFFFF"
+        android:textColor="#302F2F"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.539"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_stuff"
-        app:layout_constraintVertical_bias="0.065" />
+        app:layout_constraintVertical_bias="0.068" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

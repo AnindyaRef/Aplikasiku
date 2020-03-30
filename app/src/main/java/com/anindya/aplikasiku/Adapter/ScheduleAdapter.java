@@ -1,7 +1,6 @@
 package com.anindya.aplikasiku.Adapter;
 
 import android.content.Context;
-import android.media.tv.TvView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

@@ -4,43 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F82F73"
+    android:background="#57C17829"
     tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="384dp"
-        android:layout_height="94dp"
-        android:text="MY CONCERT APPLICATION"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.091" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="See MonstaX schedule concert "
+        android:layout_marginTop="168dp"
+        android:text="~See MonstaX schedule concert ~"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="#2C2B2B"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_login"
         android:layout_width="229dp"
         android:layout_height="52dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="#3F51B5"
         android:text="LOGIN"
         android:textColor="#FFFFFF"
@@ -51,48 +35,51 @@
 
     <TextView
         android:id="@+id/textView_signup"
-        android:layout_width="349dp"
-        android:layout_height="43dp"
+        android:layout_width="340dp"
+        android:layout_height="48dp"
         android:text="Have a account already?, If you don't have a account, you must Sign Up."
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.564"
+        app:layout_constraintHorizontal_bias="0.443"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pass_layout"
-        app:layout_constraintVertical_bias="0.146" />
+        app:layout_constraintVertical_bias="0.046" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/user_layout"
         android:layout_width="340dp"
         android:layout_height="67dp"
+        android:background="#436C6B6B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.129">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.444">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/user_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Username"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/pass_layout"
         android:layout_width="340dp"
         android:layout_height="67dp"
+        android:background="#436C6B6B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/user_layout"
-        app:layout_constraintVertical_bias="0.097">
+        app:layout_constraintVertical_bias="0.06">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/pass_input"
@@ -106,11 +93,26 @@
         android:id="@+id/text_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Here to SignUp ."
+        android:layout_marginTop="20dp"
+        android:background="#9EC3C9EC"
+        android:text="Here to SignUp "
         android:textAlignment="center"
         android:textColor="#3F51B5"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_signup" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="92dp"
+        android:layout_height="144dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
